@@ -8,6 +8,8 @@ import (
 	"os"
 	"strings"
 
+	_ "inibackend/docs"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
@@ -18,20 +20,26 @@ func init() {
 	if _, err := os.Stat(".env"); err == nil {
 		err := godotenv.Load()
 		if err != nil {
-			fmt.Println("Gagal memuat file .env:", err)
-		} else {
-			fmt.Println("File .env berhasil dimuat")
+			fmt.Println("Gagal memuat file .env")
 		}
+	} else {
+		fmt.Println("File .env tidak ditemukan, pastikan file tersebut ada di direktori kerja.")
 	}
 }
 
+// func init() {
+// 	err := godotenv.Load()
+// 	if err != nil {
+// 		fmt.Println("Gagal memuat file .env")
+// 	}
+// }
 
 // @title TES SWAGGER PEMROGRAMAN III
 // @version 1.0
 // @description This is a sample swagger for Fiber
 
 // @contact.name API Support
-// @contact.url https://github.com/ferdyleoza
+// @contact.url https://github.com/ferdleoza
 // @contact.email ferdyleoza123@gmail.com
 
 // @BasePath /
@@ -39,6 +47,7 @@ func init() {
 // @securityDefinitions.apikey BearerAuth
 // @in header
 // @name Authorization
+
 func main() {
 	app := fiber.New()
 
