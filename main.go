@@ -35,7 +35,7 @@ func init() {
 // @contact.email ferdyleoza123@gmail.com
 
 // @BasePath /
-// @schemes https
+// @schemes http https
 // @securityDefinitions.apikey BearerAuth
 // @in header
 // @name Authorization

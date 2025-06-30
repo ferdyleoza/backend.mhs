@@ -1,0 +1,19 @@
+basePath: /
+info:
+  contact:
+    email: ferdyleoza123@gmail.com
+    name: API Support
+    url: https://github.com/ferdyleoza
+  description: This is a sample swagger for Fiber
+  title: TES SWAGGER PEMROGRAMAN III
+  version: "1.0"
+paths: {}
+schemes:
+- http
+- https
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
