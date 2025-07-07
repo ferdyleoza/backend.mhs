@@ -11,6 +11,8 @@ var allowedOrigins = []string{
 	"http://localhost:5178/",
 	"http://localhost:5179/",
 	"http://127.0.0.1:8088/",
+	"frontend-mhs-qsyq.vercel.app",
+
 }
 
 func GetALLowedOrigins() []string {
